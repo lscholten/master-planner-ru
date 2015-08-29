@@ -20,31 +20,21 @@
       {
         "groupName": "Data Science Applications",
         "courses": [
-          {
-            "name": "Comp. Aid. Diagnosis",
-            "ec": 6,
-            "semester": 2
-          },
-          {
-            "name": "Comp. Cogn. Neuroscience",
-            "ec": 6,
-            "semester": 1
-          },
-          {
-            "name": "Principles of Systems Bio.",
-            "ec": 3,
-            "semester": 2
-          },
-          {
-            "name": "Pattern Recog. Nat. Sci.",
-            "ec": 3,
-            "semester": 1
-          },
-          {
-            "name": "Text Mining",
-            "ec": 6,
-            "semester": 1
-          }
+          "NWI-IMC037",
+          "SOW-MKI49",
+          "NWI-BM041B",
+          "NWI-SM299",
+          "LET-REMA-LCEX06"
+        ]
+      },
+      {
+        "groupName": "Data Science Aspects",
+        "courses": [
+          "NWI-IMC006",
+          "NWI-I00035",
+          "NWI-I00054",
+          "NWI-IMK0003",
+          "SOW-MKI51"
         ]
       }
     ]

@@ -38,5 +38,67 @@
     "name": "Machine Learning",
     "ec": 9,
     "semester": "1"
+  },
+  "NWI-IMC037": {
+    "name": "Computer Aided Diagnosis in Medical Imaging",
+    "shortName": "Comp. Aid. Diagnosis",
+    "ec": 6,
+    "semester": 2
+  },
+  "SOW-MKI49": {
+    "name": "Computational Cognitive Neuroscience",
+    "shortName": "Comp. Cogn. Neuroscience",
+    "ec": 6,
+    "semester": 1
+  },
+  "NWI-BM041B": {
+    "name": "Principles of Systems Biology",
+    "shortName": "Principles of Systems Bio.",
+    "ec": 3,
+    "semester": 2
+  },
+  "NWI-SM299": {
+    "name": "Pattern Recognition for the Natural Sciences",
+    "shortName": "Pattern Recog. Nat. Sci.",
+    "ec": 3,
+    "semester": 1
+  },
+  "LET-REMA-LCEX06": {
+    "name": "Text Mining",
+    "ec": 6,
+    "semester": 1
+  },
+  "NWI-IMC006": {
+    "name": "Law in Cyberspace",
+    "ec": 6,
+    "semester": 1
+  },
+  "NWI-I00035": {
+    "name": "Foundations of Information Systems",
+    "ec": 6,
+    "semester": 2
+  },
+  "NWI-I00054": {
+    "name": "Cognition and Representation",
+    "ec": 6,
+    "semester": 1
+  },
+  "NWI-IMK0003": {
+    "name": "Business Rules Specification and Application",
+    "shortName": "Business Rules",
+    "ec": 3,
+    "semester": 2
+  },
+  "SOW-MKI51": {
+    "name": "Artificial Intelligence at the Webscale",
+    "shortName": "Webscale AI",
+    "ec": 6,
+    "semester": 2
+  },
+  "NWI-IMC029": {
+    "name": "Master's Thesis in Computing Science",
+    "shortName": "Master's Thesis",
+    "ec": 30,
+    "semester": 2
   }
 }
