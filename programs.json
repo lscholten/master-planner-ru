@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Data Science (SMI variant)",
+    "trackBasis": [
+      "NWI-I00041",
+      "NWI-IMC030",
+      "NWI-IMC012",
+      "NWI-IMC047",
+      "NWI-IMI0003"
+    ],
+    "trackElectiveGroups": [
+      {
+        "groupName": "DS Theory and Tools",
+        "courses": [
+          "NWI-NB054E",
+          "NWI-IMC042",
+          "NWI-NM048C"
+        ]
+      },
+      {
+        "groupName": "Data Science Applications",
+        "courses": [
+          {
+            "name": "Comp. Aid. Diagnosis",
+            "ec": 6,
+            "semester": 2
+          },
+          {
+            "name": "Comp. Cogn. Neuroscience",
+            "ec": 6,
+            "semester": 1
+          },
+          {
+            "name": "Principles of Systems Bio.",
+            "ec": 3,
+            "semester": 2
+          },
+          {
+            "name": "Pattern Recog. Nat. Sci.",
+            "ec": 3,
+            "semester": 1
+          },
+          {
+            "name": "Text Mining",
+            "ec": 6,
+            "semester": 1
+          }
+        ]
+      }
+    ]
+  }
+]

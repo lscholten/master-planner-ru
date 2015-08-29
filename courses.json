@@ -1,0 +1,42 @@
+{
+  "NWI-I00041": {
+    "name": "Information Retrieval",
+    "ec": 6,
+    "semester": 1
+  },
+  "NWI-IMC030": {
+    "name": "Machine Learning in Practice",
+    "ec": 6,
+    "semester": 2
+  },
+  "NWI-IMC012": {
+    "name": "Bayesian Networks",
+    "ec": 6,
+    "semester": 1
+  },
+  "NWI-IMC047": {
+    "name": "Research Seminar DS",
+    "ec": 6,
+    "semester": 2
+  },
+  "NWI-IMI0003": {
+    "name": "Philosophy and Ethics",
+    "ec": 3,
+    "semester": 1
+  },
+  "NWI-NB054E": {
+    "name": "Statistical Machine Learning",
+    "ec": 6,
+    "semester": "1"
+  },
+  "NWI-IMC042": {
+    "name": "Natural Computing",
+    "ec": 6,
+    "semester": "2"
+  },
+  "NWI-NM048C": {
+    "name": "Machine Learning",
+    "ec": 9,
+    "semester": "1"
+  }
+}
