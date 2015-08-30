@@ -2,103 +2,195 @@
   "NWI-I00041": {
     "name": "Information Retrieval",
     "ec": 6,
-    "semester": 1
+    "semester": 1,
+    "code": "NWI-I00041"
   },
   "NWI-IMC030": {
     "name": "Machine Learning in Practice",
     "ec": 6,
-    "semester": 2
+    "semester": 2,
+    "code": "NWI-IMC030"
   },
   "NWI-IMC012": {
     "name": "Bayesian Networks",
     "ec": 6,
-    "semester": 1
+    "semester": 1,
+    "code": "NWI-IMC012"
   },
   "NWI-IMC047": {
     "name": "Research Seminar DS",
     "ec": 6,
-    "semester": 2
+    "semester": 2,
+    "code": "NWI-IMC047"
   },
-  "NWI-IMI0003": {
+  "NWI-IMI003": {
     "name": "Philosophy and Ethics",
     "ec": 3,
-    "semester": 1
+    "semester": 1,
+    "code": "NWI-IMI003"
   },
   "NWI-NB054E": {
     "name": "Statistical Machine Learning",
     "ec": 6,
-    "semester": "1"
+    "semester": "1",
+    "code": "NWI-NB054E"
   },
   "NWI-IMC042": {
     "name": "Natural Computing",
     "ec": 6,
-    "semester": "2"
+    "semester": "2",
+    "code": "NWI-IMC042"
   },
   "NWI-NM048C": {
     "name": "Machine Learning",
     "ec": 9,
-    "semester": "1"
+    "semester": "1",
+    "code": "NWI-NM048C"
   },
   "NWI-IMC037": {
     "name": "Computer Aided Diagnosis in Medical Imaging",
     "shortName": "Comp. Aid. Diagnosis",
     "ec": 6,
-    "semester": 2
+    "semester": 2,
+    "code": "NWI-IMC037"
   },
   "SOW-MKI49": {
     "name": "Computational Cognitive Neuroscience",
     "shortName": "Comp. Cogn. Neuroscience",
     "ec": 6,
-    "semester": 1
+    "semester": 1,
+    "code": "SOW-MKI49"
   },
   "NWI-BM041B": {
     "name": "Principles of Systems Biology",
     "shortName": "Principles of Systems Bio.",
     "ec": 3,
-    "semester": 2
+    "semester": 2,
+    "code": "NWI-BM041B"
   },
   "NWI-SM299": {
     "name": "Pattern Recognition for the Natural Sciences",
     "shortName": "Pattern Recog. Nat. Sci.",
     "ec": 3,
-    "semester": 1
+    "semester": 1,
+    "code": "NWI-SM299"
   },
   "LET-REMA-LCEX06": {
     "name": "Text Mining",
     "ec": 6,
-    "semester": 1
+    "semester": 1,
+    "code": "LET-REMA-LCEX06"
   },
   "NWI-IMC006": {
     "name": "Law in Cyberspace",
     "ec": 6,
-    "semester": 1
+    "semester": 1,
+    "code": "NWI-IMC006"
   },
   "NWI-I00035": {
     "name": "Foundations of Information Systems",
     "ec": 6,
-    "semester": 2
+    "semester": 2,
+    "code": "NWI-I00035"
   },
   "NWI-I00054": {
     "name": "Cognition and Representation",
     "ec": 6,
-    "semester": 1
+    "semester": 1,
+    "code": "NWI-I00054"
   },
-  "NWI-IMK0003": {
+  "NWI-IMK003": {
     "name": "Business Rules Specification and Application",
     "shortName": "Business Rules",
     "ec": 3,
-    "semester": 2
+    "semester": 2,
+    "code": "NWI-IMK003"
   },
   "SOW-MKI51": {
     "name": "Artificial Intelligence at the Webscale",
     "shortName": "Webscale AI",
     "ec": 6,
-    "semester": 2
+    "semester": 2,
+    "code": "SOW-MKI51"
   },
   "NWI-IMC029": {
     "name": "Master's Thesis in Computing Science",
     "shortName": "Master's Thesis",
     "ec": 30,
-    "semester": 2
+    "semester": 2,
+    "code": "NWI-IMC029"
+  },
+  "NWI-IMC052": {
+    "name": "Software Development in Start-ups",
+    "shortName": "Soft. Dev. Startups",
+    "ec": 6,
+    "semester": 1,
+    "code": "NWI-IMC052"
+  },
+  "NWI-IMC021": {
+    "name": "System Development Management",
+    "ec": 6,
+    "semester": 2,
+    "code": "NWI-IMC021"
+  },
+  "NWI-FMT003E": {
+    "name": "Innovation Management",
+    "ec": 6,
+    "semester": 1,
+    "code": "NWI-FMT003E"
+  },
+  "NWI-FMT024": {
+    "name": "Policy and economics",
+    "ec": 3,
+    "semester": 1,
+    "code": "NWI-FMT024"
+  },
+  "NWI-FMT006A": {
+    "name": "Entrepreneurship: Making a Business Plan",
+    "shortName": "Entrepreneurship: B.Plan",
+    "ec": 3,
+    "semester": 1,
+    "code": "NWI-FMT006A"
+  },
+  "NWI-FMT019": {
+    "name": "Methods in Societal Research: Science, Management & Innovation",
+    "shortName": "Research Methods: SMI",
+    "ec": 3,
+    "semester": 1,
+    "code": "NWI-FMT019"
+  },
+  "NWI-IMI004": {
+    "name": "Software Development Entrepreneurship",
+    "shortName": "SD Entrepreneurs.",
+    "ec": 6,
+    "semester": 1,
+    "code": "NWI-IMI004"
+  },
+  "NWI-I00152": {
+    "name": "Research methods (master course)",
+    "shortName": "IS Research Meth.",
+    "ec": 3,
+    "semester": 1,
+    "code": "NWI-I00152"
+  },
+  "NWI-IMK009": {
+    "name": "Business Service Innovation",
+    "shortName": "Business Serv. Innv.",
+    "ec": 3,
+    "semester": 2,
+    "code": "NWI-IMK009"
+  },
+  "NWI-I00153": {
+    "name": "Security In Organisations",
+    "ec": 6,
+    "semester": 1,
+    "code": "NWI-I00153"
+  },
+  "NWI-IMK007": {
+    "name": "Master's Thesis Information Science",
+    "shortName": "IS Master's Thesis",
+    "ec": 24,
+    "semester": 2,
+    "code": "NWI-IMK007"
   }
 }
