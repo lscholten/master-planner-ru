@@ -17,11 +17,11 @@
     "semester": 1,
     "code": "NWI-IMC012"
   },
-  "NWI-IMC047": {
+  "NWI-IMC044": {
     "name": "Research Seminar DS",
     "ec": 6,
     "semester": 2,
-    "code": "NWI-IMC047"
+    "code": "NWI-IMC044"
   },
   "NWI-IMI003": {
     "name": "Philosophy and Ethics",
@@ -192,5 +192,96 @@
     "ec": 24,
     "semester": 2,
     "code": "NWI-IMK007"
+  },
+  "NWI-I00032": {
+    "name": "Advanced Programming",
+    "ec": 6,
+    "semester": 1,
+    "code": "NWI-I00032"
+  },
+  "NWI-I00110": {
+    "name": "Testing Techniques",
+    "ec": 6,
+    "semester": 1,
+    "code": "NWI-I00110"
+  },
+  "NWI-IMC046": {
+    "name": "Model Checking",
+    "ec": 6,
+    "semester": 2,
+    "code": "NWI-IMC046"
+  },
+  "NWI-IMC004": {
+    "name": "Compiler Construction",
+    "ec": 6,
+    "semester": 2,
+    "code": "NWI-IMC004"
+  },
+  "NWI-I00155": {
+    "name": "Design of Embedded Systems",
+    "shortName": "Embedded Systems",
+    "ec": 6,
+    "semester": 1,
+    "code": "NWI-I00155"
+  },
+  "NWI-IMC051": {
+    "name": "Software Security (+1ec)",
+    "ec": 6,
+    "semester": 1,
+    "code": "NWI-IMC051"
+  },
+  "NWI-IMC035": {
+    "name": "Software Analysis",
+    "ec": 6,
+    "semester": 2,
+    "code": "NWI-IMC035"
+  },
+  "NWI-IMC009": {
+    "name": "Automated Reasoning",
+    "ec": 6,
+    "semester": 1,
+    "code": "NWI-IMC009"
+  },
+  "NWI-I00139": {
+    "name": "Proof Assistans",
+    "ec": 6,
+    "semester": 2,
+    "code": "NWI-I0039"
+  },
+  "NWI-IMC010": {
+    "name": "Type Theory & Coq",
+    "ec": 6,
+    "semester": 2,
+    "code": "NWI-IMC011"
+  },
+  "NWI-IMC011": {
+    "name": "Semantics & Domain Theory",
+    "ec": 6,
+    "semester": 2,
+    "code": "NWI-IMC011"
+  },
+  "NWI-IMC036": {
+    "name": "Coalgebra (NOT IN 2015)",
+    "ec": 6,
+    "semester": 1,
+    "code": "NWI-IMC036"
+  },
+  "NWI-WM072B": {
+    "name": "Complexity Theory (2015)",
+    "ec": 6,
+    "semester": 1,
+    "code": "NWI-WM072B"
+  },
+  "NWI-WM120B": {
+    "name": "Computability Theory (2016)",
+    "ec": 8,
+    "semester": 1,
+    "code": "NWI-WM120B"
+  },
+  "NWI-IMC045": {
+    "name": "Research Seminar Software Science",
+    "shortName": "Res. Semn. SoSci",
+    "ec": 6,
+    "semester": 2
   }
 }

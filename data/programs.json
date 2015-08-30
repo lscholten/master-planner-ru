@@ -42,7 +42,7 @@
       "5": {
         "name": "Academic Fundamentals",
         "courses": [
-          "NWI-IMC047",
+          "NWI-IMC044",
           "NWI-IMI003"
         ]
       },
@@ -105,6 +105,117 @@
     ]
   },
   {
+    "name": "Software Science",
+    "ec": 120,
+    "courseGroups": {
+      "1": {
+        "name": "Specialisation basis",
+        "courses": [
+          "NWI-I00032",
+          "NWI-IMC046",
+          "NWI-I00110"
+        ]
+      },
+      "2": {
+        "name": "Software Technology & Engineering",
+        "courses": [
+          "NWI-IMC004",
+          "NWI-I00155",
+          "NWI-IMC052",
+          "NWI-IMC051"
+        ]
+      },
+      "3": {
+        "name": "Computer-aided analysis",
+        "courses": [
+          "NWI-IMC035",
+          "NWI-IMC009",
+          "NWI-I00139"
+        ]
+      },
+      "4": {
+        "name": "Theory of Computation",
+        "courses": [
+          "NWI-IMC010",
+          "NWI-IMC011",
+          "NWI-IMC036",
+          "NWI-WM072B",
+          "NWI-WM120B"
+        ]
+      },
+      "5": {
+        "name": "Academic Fundamentals",
+        "courses": [
+          "NWI-IMC045",
+          "NWI-IMI003"
+        ]
+      },
+      "6": {
+        "name": "Sci, Mgmt and Innovation",
+        "courses": [
+          "NWI-IMC052",
+          "NWI-IMC021",
+          "NWI-FMT003E",
+          "NWI-FMT024",
+          "NWI-FMT006A",
+          "NWI-FMT019"
+        ]
+      },
+      "7": {
+        "name": "Master's Thesis",
+        "courses": [
+          "NWI-IMC029"
+        ]
+      }
+    },
+    "requirements": [
+      {
+        "description": "Specialisation Basis",
+        "courseGroups": [
+          "1"
+        ],
+        "ec": 18
+      },
+      {
+        "description": "Specialisation Electives",
+        "courseGroups": [
+          "2",
+          "3",
+          "4"
+        ],
+        "ec": 24
+      },
+      {
+        "description": "Master's Thesis",
+        "courseGroups": [
+          "7"
+        ],
+        "ec": 30
+      },
+      {
+        "description": "Sci, Mgmt and Innovation",
+        "courseGroups": [
+          "6"
+        ],
+        "ec": 27
+      },
+      {
+        "description": "Academic Fundamentals",
+        "courseGroups": [
+          "5"
+        ],
+        "ec": 9
+      },
+      {
+        "description": "At least one computation",
+        "courseGroups": [
+          "4"
+        ],
+        "ec": 6
+      }
+    ]
+  },
+  {
     "name": "Information Sciences",
     "ec": 60,
     "courseGroups": {
@@ -143,22 +254,30 @@
     "requirements": [
       {
         "description": "Master basis",
-        "courseGroups": ["1"],
+        "courseGroups": [
+          "1"
+        ],
         "ec": 12
       },
       {
         "description": "Specialisation",
-        "courseGroups": ["2"],
+        "courseGroups": [
+          "2"
+        ],
         "ec": 6
       },
       {
         "description": "Choice",
-        "courseGroups": ["3"],
+        "courseGroups": [
+          "3"
+        ],
         "ec": 12
       },
       {
         "description": "Master's Thesis",
-        "courseGroups": ["4"],
+        "courseGroups": [
+          "4"
+        ],
         "ec": 24
       }
     ]
