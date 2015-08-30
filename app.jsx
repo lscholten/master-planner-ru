@@ -4,7 +4,7 @@ var Application = React.createClass({
     },
     componentDidMount: function () {
         $.ajax({
-            url: "programs.json",
+            url: "data/programs.json",
             dataType: 'json',
             cache: false,
             success: function (data) {
@@ -12,7 +12,7 @@ var Application = React.createClass({
             }.bind(this)
         });
         $.ajax({
-            url: "courses.json",
+            url: "data/courses.json",
             dataType: 'json',
             cache: false,
             success: function (data) {
