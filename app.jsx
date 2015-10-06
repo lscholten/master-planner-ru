@@ -1,8 +1,8 @@
 var Application = React.createClass({
-    getInitialState: function () {
-        return {courseRepo: [], programRepo: [], courses: {"y1": [], "y2": []}};
+    getInitialState: function() {
+        return { screen: "program-selection", programRepo: [], programs: [] };
     },
-    componentDidMount: function () {
+    componentDidMount: function() {
         $.ajax({
             url: "data/programs.json",
             dataType: 'json',
@@ -11,6 +11,67 @@ var Application = React.createClass({
                 this.setState({programRepo: data});
             }.bind(this)
         });
+    },
+    selectPrograms: function(programIndices) {
+        selectedPrograms = [];
+        programIndices.forEach(function(index) {
+            selectedPrograms.push(this.state.programRepo[index]);
+        }.bind(this));
+
+        this.setState({
+            screen: "planner",
+            programs: selectedPrograms
+        });
+    },
+    render: function() {
+        if (this.state.screen == "program-selection") {
+            return <ProgramSelection programRepo={this.state.programRepo} selectPrograms={this.selectPrograms} />;
+        } else if (this.state.screen == "planner") {
+            return <InstantiatedApplication programs={ this.state.programs }/>
+        }
+        return "Error";
+    }
+});
+
+var ProgramSelection = React.createClass({
+    onSubmit: function(e) {
+        e.preventDefault();
+        submittedProgramIndices = [];
+        this.props.programRepo.forEach(function(program) {
+            checkbox = React.findDOMNode(this.refs[program.name]);
+            if (checkbox.checked) {
+                submittedProgramIndices.push(checkbox.value);
+            }
+        }.bind(this));
+        this.props.selectPrograms(submittedProgramIndices);
+    },
+    render: function() {
+        return <div className="row">
+            <div className="col-xs-12">
+                <h2>First select programs from the list of possible programs.</h2>
+                <form onSubmit={this.onSubmit}>
+                    {
+                        this.props.programRepo.map(function(program, i) {
+                            return <div className="checkBox" key={program.name}>
+                                <label>
+                                    <input ref={program.name} type="checkbox" value={i} />
+                                    { program.name }
+                                </label>
+                            </div>;
+                        })
+                    }
+                    <button className="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    }
+});
+
+var InstantiatedApplication = React.createClass({
+    getInitialState: function () {
+        return {courseRepo: [], courses: {"y1": [], "y2": []}};
+    },
+    componentDidMount: function () {
         $.ajax({
             url: "data/courses.json",
             dataType: 'json',
@@ -47,7 +108,7 @@ var Application = React.createClass({
         return <div>
             <SemesterList coursesPicked={this.state.courses} courseRepo={this.state.courseRepo}
                           removeCourse={ this.removeCourse }/>
-            <StudyProgramList programs={this.state.programRepo} repos={this.state} addCourse={ this.addCourse }
+            <StudyProgramList programs={this.props.programs} repos={this.state} addCourse={ this.addCourse }
                               picked={this.getAllPickedCourses()}/>
         </div>;
     }
