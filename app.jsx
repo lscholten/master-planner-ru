@@ -1,6 +1,6 @@
 var Application = React.createClass({
     getInitialState: function() {
-        return { screen: "program-selection", programRepo: [], programs: [] };
+        return { screen: "program-selection", programRepo: [], programs: [], courses: {"y1": [], "y2": []}, courseRepo: {}};
     },
     componentDidMount: function() {
         $.ajax({
@@ -11,39 +11,77 @@ var Application = React.createClass({
                 this.setState({programRepo: data});
             }.bind(this)
         });
+        $.ajax({
+            url: "data/courses.json",
+            dataType: 'json',
+            cache: false,
+            success: function (data) {
+                this.setState({courseRepo: data})
+            }.bind(this)
+        });
     },
-    selectPrograms: function(programIndices) {
-        selectedPrograms = [];
-        programIndices.forEach(function(index) {
-            selectedPrograms.push(this.state.programRepo[index]);
-        }.bind(this));
+    selectPrograms: function(programs) {
+        checkedSorted = [];
+        this.state.programRepo.forEach(function(item) {
+            if (programs.indexOf(item) > -1) {
+                checkedSorted.push(item);
+            }
+        });
 
         this.setState({
             screen: "planner",
-            programs: selectedPrograms
+            programs: checkedSorted
         });
+    },
+    backToProgramSelection: function() {
+        this.setState({
+            screen: "program-selection"
+        });
+    },
+    updateCourses: function(courses) {
+        this.setState({"courses": courses});
     },
     render: function() {
         if (this.state.screen == "program-selection") {
-            return <ProgramSelection programRepo={this.state.programRepo} selectPrograms={this.selectPrograms} />;
+            return <ProgramSelection
+                programRepo={this.state.programRepo}
+                selectPrograms={this.selectPrograms}
+                selectedPrograms={this.state.programs}
+                />;
         } else if (this.state.screen == "planner") {
-            return <InstantiatedApplication programs={ this.state.programs }/>
+            return <Planner
+                courses={ this.state.courses }
+                programs={ this.state.programs }
+                backToProgramSelection={this.backToProgramSelection}
+                updateCourses={this.updateCourses}
+                courseRepo={this.state.courseRepo}
+                programRepo={this.state.programRepo}
+                />
         }
         return "Error";
     }
 });
 
 var ProgramSelection = React.createClass({
+    getInitialState: function() {
+        return {
+            "selectedPrograms": this.props.selectedPrograms
+        };
+    },
     onSubmit: function(e) {
         e.preventDefault();
-        submittedProgramIndices = [];
-        this.props.programRepo.forEach(function(program) {
-            checkbox = React.findDOMNode(this.refs[program.name]);
-            if (checkbox.checked) {
-                submittedProgramIndices.push(checkbox.value);
-            }
-        }.bind(this));
-        this.props.selectPrograms(submittedProgramIndices);
+        this.props.selectPrograms(this.state.selectedPrograms);
+    },
+    onChange: function(e) {
+        target = e.target;
+        checked = this.state.selectedPrograms;
+        program = this.props.programRepo[parseInt(target.value)];
+        if (checked.indexOf(program) > -1) {
+            checked.splice(checked.indexOf(program), 1);
+        } else {
+            checked.push(program);
+        }
+        this.setState({"selectedPrograms": checked});
     },
     render: function() {
         return <div className="row">
@@ -54,11 +92,14 @@ var ProgramSelection = React.createClass({
                         this.props.programRepo.map(function(program, i) {
                             return <div className="checkBox" key={program.name}>
                                 <label>
-                                    <input ref={program.name} type="checkbox" value={i} />
+                                    <input ref={program.name} type="checkbox" value={i}
+                                           checked={this.state.selectedPrograms.indexOf(program) > -1}
+                                           onChange={this.onChange}
+                                        />
                                     { program.name }
                                 </label>
                             </div>;
-                        })
+                        }.bind(this))
                     }
                     <button className="btn btn-primary">Submit</button>
                 </form>
@@ -67,49 +108,36 @@ var ProgramSelection = React.createClass({
     }
 });
 
-var InstantiatedApplication = React.createClass({
-    getInitialState: function () {
-        return {courseRepo: [], courses: {"y1": [], "y2": []}};
-    },
-    componentDidMount: function () {
-        $.ajax({
-            url: "data/courses.json",
-            dataType: 'json',
-            cache: false,
-            success: function (data) {
-                this.setState({courseRepo: data})
-            }.bind(this)
-        });
-    },
+var Planner = React.createClass({
     addCourse: function (year, course) {
-        year1 = this.state.courses.y1;
-        year2 = this.state.courses.y2;
+        year1 = this.props.courses.y1;
+        year2 = this.props.courses.y2;
         if (year == 1) {
-            year1 = year1.concat([this.state.courseRepo[course]]);
+            year1 = year1.concat([this.props.courseRepo[course]]);
         } else {
-            year2 = year2.concat([this.state.courseRepo[course]]);
+            year2 = year2.concat([this.props.courseRepo[course]]);
         }
-        this.setState({courses: {"y1": year1, "y2": year2}});
+        this.props.updateCourses({"y1": year1, "y2": year2});
     },
     removeCourse: function (coursecode) {
-        console.log(coursecode);
-        year1 = this.state.courses.y1.filter(function (course) {
+        year1 = this.props.courses.y1.filter(function (course) {
             return course.code != coursecode
         });
-        year2 = this.state.courses.y2.filter(function (course) {
+        year2 = this.props.courses.y2.filter(function (course) {
             return course.code != coursecode
         });
-        this.setState({courses: {"y1": year1, "y2": year2}});
-    },
-    getAllPickedCourses: function () {
-        return this.state.courses.y1.concat(this.state.courses.y2);
+        this.props.updateCourses({"y1": year1, "y2": year2});
     },
     render: function () {
+        pickedCourses = this.props.courses.y1.concat(this.props.courses.y2);
         return <div>
-            <SemesterList coursesPicked={this.state.courses} courseRepo={this.state.courseRepo}
+            <button className="btn" onClick={ this.props.backToProgramSelection }>
+                Back to program selection
+            </button>
+            <SemesterList coursesPicked={this.props.courses} courseRepo={this.props.courseRepo}
                           removeCourse={ this.removeCourse }/>
-            <StudyProgramList programs={this.props.programs} repos={this.state} addCourse={ this.addCourse }
-                              picked={this.getAllPickedCourses()}/>
+            <StudyProgramList programs={this.props.programs} repos={{programRepo: this.props.programRepo, courseRepo: this.props.courseRepo}} addCourse={ this.addCourse }
+                              picked={pickedCourses}/>
         </div>;
     }
 });
