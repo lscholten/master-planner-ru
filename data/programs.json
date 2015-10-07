@@ -1,5 +1,110 @@
 [
   {
+    "name": "Data Science",
+    "ec": 120,
+    "courseGroups": {
+      "1": {
+        "name": "Specialisation Basis",
+        "courses": [
+          "NWI-I00041",
+          "NWI-IMC030",
+          "NWI-IMC012"
+        ]
+      },
+      "2": {
+        "name": "DS Theory and Tools",
+        "courses": [
+          "NWI-NB054E",
+          "NWI-IMC042",
+          "NWI-NM048C"
+        ]
+      },
+      "3": {
+        "name": "Data Science Applications",
+        "courses": [
+          "NWI-IMC037",
+          "SOW-MKI49",
+          "NWI-BM041B",
+          "NWI-SM299",
+          "LET-REMA-LCEX06"
+        ]
+      },
+      "4": {
+        "name": "Data Science Aspects",
+        "courses": [
+          "NWI-IMC006",
+          "NWI-I00035",
+          "NWI-I00054",
+          "NWI-IMK003",
+          "SOW-MKI51"
+        ]
+      },
+      "5": {
+        "name": "Academic Fundamentals",
+        "courses": [
+          "NWI-IMC044",
+          "NWI-IMI003"
+        ]
+      },
+      "6": {
+        "name": "Internship",
+        "courses": [
+          "NWI-IMC047"
+        ]
+      },
+      "7": {
+        "name": "Master's Thesis",
+        "courses": [
+          "NWI-IMC029"
+        ]
+      }
+    },
+    "requirements": [
+      {
+        "description": "Specialisation Basis",
+        "courseGroups": [
+          "1"
+        ],
+        "ec": 18
+      },
+      {
+        "description": "Specialisation Electives",
+        "courseGroups": [
+          "2",
+          "3",
+          "4"
+        ],
+        "ec": 24
+      },
+      {
+        "description": "Master's Thesis",
+        "courseGroups": [
+          "7"
+        ],
+        "ec": 30
+      },
+      {
+        "description": "Research Internship",
+        "courseGroups": [
+          "6"
+        ],
+        "ec": 15
+      },
+      {
+        "description": "Academic Fundamentals",
+        "courseGroups": [
+          "5"
+        ],
+        "ec": 9
+      },
+      {
+        "description": "Free Choice",
+        "courseGroups": [],
+        "ec": 12
+      }
+    ]
+  },
+  {
     "name": "Data Science (SMI variant)",
     "ec": 120,
     "courseGroups": {
@@ -105,7 +210,7 @@
     ]
   },
   {
-    "name": "Software Science",
+    "name": "Software Science (SMI Variant)",
     "ec": 120,
     "courseGroups": {
       "1": {

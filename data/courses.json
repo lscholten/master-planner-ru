@@ -283,5 +283,10 @@
     "shortName": "Res. Semn. SoSci",
     "ec": 6,
     "semester": 2
+  },
+  "NWI-IMC047": {
+    "name": "Research Internship",
+    "ec": 15,
+    "semester": 1
   }
 }
