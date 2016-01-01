@@ -1,0 +1,40 @@
+{
+  "name": "ru-master-planner",
+  "version": "0.0.3",
+  "author": "Luuk Scholten",
+  "contributors": [
+    {
+      "name": "Luuk Scholten",
+      "email": "info@luukscholten.com"
+    }
+  ],
+  "scripts": {
+    "start": "node ./devserver",
+    "build": "cross-env NODE_ENV=production UV_THREADPOOL_SIZE=200 webpack --config ./webpack.config"
+  },
+  "dependencies": {
+    "babel-core": "^6.3.17",
+    "babel-eslint": "^4.1.5",
+    "babel-loader": "^6.0.1",
+    "babel-plugin-react-transform": "^1.1.1",
+    "babel-preset-es2015": "^6.1.4",
+    "babel-preset-react": "^6.1.4",
+    "core-js": "^1.2.6",
+    "cross-env": "^1.0.1",
+    "dragula": "^3.6.2",
+    "eventemitter3": "^1.1.1",
+    "express": "^4.13.3",
+    "flux": "^2.1.1",
+    "history": "^1.13.1",
+    "jquery": "^2.1.4",
+    "react": "^0.14",
+    "react-addons-css-transition-group": "^0.14.2",
+    "react-dom": "^0.14.2",
+    "react-transform-catch-errors": "^1.0.0",
+    "react-transform-hmr": "^1.0.1",
+    "redbox-react": "^1.1.1",
+    "webpack": "^1.12.0",
+    "webpack-dev-middleware": "^1.2.0",
+    "webpack-hot-middleware": "^2.4.1"
+  }
+}
