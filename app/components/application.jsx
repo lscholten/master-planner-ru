@@ -5,13 +5,15 @@ import ProgramSelection from './program-selection';
 import Planner from './planner';
 import CourseStore from '../stores/course-store';
 import * as CourseActions from '../actions/course-actions';
+import ProgramStore from '../stores/program-store';
+import * as ProgramActions from '../actions/program-actions';
 
 export default class Application extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             screen: "program-selection",
-            programRepo: [],
+            programRepo: ProgramStore.programs,
             programs: [],
             courses: {"y1": [], "y2": []},
             courseRepo: CourseStore.courses
@@ -19,24 +21,23 @@ export default class Application extends React.Component {
     }
 
     componentDidMount() {
-        jQuery.ajax({
-            url: "data/programs.json",
-            dataType: 'json',
-            cache: false,
-            success: function (data) {
-                this.setState({programRepo: data});
-            }.bind(this)
-        });
         CourseStore.subscribe(this.updateCourseRepo.bind(this));
         CourseActions.loadCourses();
+        ProgramStore.subscribe(this.updateProgramRepo.bind(this));
+        ProgramActions.loadPrograms();
     }
 
     componentWillUnmount() {
         CourseStore.unsubscribe(this.updateCourseRepo.bind(this));
+        ProgramStore.unsubscribe(this.updateProgramRepo.bind(this));
     }
 
     updateCourseRepo() {
         this.setState({ courseRepo: CourseStore.courses })
+    }
+
+    updateProgramRepo() {
+        this.setState({ programRepo: ProgramStore.programs });
     }
 
     selectPrograms(programs) {
