@@ -9,11 +9,16 @@ export function loadPrograms() {
         dataType: 'json',
         cache: false,
         success: (data) => {
-            console.log(data);
             AppDispatcher.dispatch({
                 type: ProgramActionTypes.SET_PROGRAMS,
                 programs: data
             });
         }
+    });
+}
+export function toggleSelection(program) {
+    AppDispatcher.dispatch({
+        type:  ProgramActionTypes.TOGGLE_PROGRAM_SELECTION,
+        program: program
     });
 }

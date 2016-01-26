@@ -11,13 +11,7 @@ import * as ProgramActions from '../actions/program-actions';
 export default class Application extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            screen: "program-selection",
-            programRepo: ProgramStore.programs,
-            programs: [],
-            courses: {"y1": [], "y2": []},
-            courseRepo: CourseStore.courses
-        };
+        this.state = { screen: "program-selection" };
     }
 
     componentDidMount() {
@@ -40,17 +34,10 @@ export default class Application extends React.Component {
         this.setState({ programRepo: ProgramStore.programs });
     }
 
-    selectPrograms(programs) {
-        var checkedSorted = [];
-        this.state.programRepo.forEach(function(item) {
-            if (programs.indexOf(item) > -1) {
-                checkedSorted.push(item);
-            }
-        });
-
+    continueToCourseSelection(e) {
+        e.preventDefault();
         this.setState({
-            screen: "planner",
-            programs: checkedSorted
+            screen: "planner"
         });
     }
 
@@ -60,25 +47,14 @@ export default class Application extends React.Component {
         });
     }
 
-    updateCourses(courses) {
-        this.setState({"courses": courses});
-    }
-
     render() {
         if (this.state.screen == "program-selection") {
             return <ProgramSelection
-                programRepo={this.state.programRepo}
-                selectPrograms={this.selectPrograms.bind(this)}
-                selectedPrograms={this.state.programs}
+                continueToCourseSelection={ this.continueToCourseSelection.bind(this) }
                 />;
         } else if (this.state.screen == "planner") {
             return <Planner
-                courses={ this.state.courses }
-                programs={ this.state.programs }
-                backToProgramSelection={this.backToProgramSelection.bind(this)}
-                updateCourses={this.updateCourses.bind(this)}
-                courseRepo={this.state.courseRepo}
-                programRepo={this.state.programRepo}
+                backToProgramSelection={ this.backToProgramSelection.bind(this) }
                 />
         }
         return "Error";

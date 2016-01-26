@@ -1,9 +1,25 @@
 import React from 'react';
 
+import ProgramStore from '../stores/program-store';
+import * as ProgramActions from '../actions/program-actions';
+
 export default class ProgramSelection extends React.Component {
+
     constructor(props) {
         super(props);
-        this.state = { selectedPrograms: this.props.selectedPrograms }
+        this.state = { selectedPrograms: ProgramStore.selected };
+    }
+
+    compomentDidMount () {
+        ProgramStore.subscribe(this.updateSelection.bind(this));
+    }
+
+    componentWillUnmount() {
+        ProgramStore.unsubscribe(this.updateSelection.bind(this));
+    }
+
+    updateSelection () {
+        this.setState({ selectedPrograms: ProgramStore.selected });
     }
 
     onSubmit (e) {
@@ -12,24 +28,17 @@ export default class ProgramSelection extends React.Component {
     }
 
     onChange (e) {
-        var target = e.target;
-        var checked = this.state.selectedPrograms;
-        var program = this.props.programRepo[parseInt(target.value)];
-        if (checked.indexOf(program) > -1) {
-            checked.splice(checked.indexOf(program), 1);
-        } else {
-            checked.push(program);
-        }
-        this.setState({"selectedPrograms": checked});
+        var program = ProgramStore.programs[parseInt(e.target.value)];
+        ProgramActions.toggleSelection(program);
     }
 
     render () {
         return <div className="row">
             <div className="col-xs-12">
                 <h2>First select programs from the list of possible programs.</h2>
-                <form onSubmit={this.onSubmit.bind(this)}>
+                <form onSubmit={ this.props.continueToCourseSelection }>
                     {
-                        this.props.programRepo.map(function(program, i) {
+                        ProgramStore.programs.map(function(program, i) {
                             return <div className="checkBox" key={program.name}>
                                 <label>
                                     <input ref={program.name} type="checkbox" value={i}

@@ -18,7 +18,7 @@ class CourseStoreClass extends Store {
     constructor() {
         super();
         this.courses = {};
-        this.chosenCourses = [];
+        this.chosen = {"y1": [], "y2": []};
     }
 }
 
@@ -32,8 +32,25 @@ CourseStore.dispatchToken = AppDispatcher.register(
     action => {
         if (action.type == CourseActionTypes.SET_COURSES) {
             CourseStore.courses = action.courses;
-            CourseStore.emitChange();
         }
+        if (action.type == CourseActionTypes.CHOOSE_COURSE) {
+            if (action.year == 1) {
+                CourseStore.chosen.y1 = CourseStore.chosen.y1.concat([CourseStore.courses[action.course]]);
+            } else {
+                CourseStore.chosen.y2 = CourseStore.chosen.y2.concat([CourseStore.courses[action.course]]);
+            }
+        }
+        if (action.type == CourseActionTypes.DISCARD_COURSE) {
+            var year1 = CourseStore.chosen.y1.filter(function (course) {
+                return course.code != action.course
+            });
+            var year2 = CourseStore.chosen.y2.filter(function (course) {
+                return course.code != action.course
+            });
+            CourseStore.chosen.y1 = year1;
+            CourseStore.chosen.y2 = year2;
+        }
+        CourseStore.emitChange();
     }
 );
 

@@ -16,3 +16,16 @@ export function loadCourses() {
         }
     });
 }
+export function chooseCourse(year, course) {
+    AppDispatcher.dispatch({
+        type: CourseActionTypes.CHOOSE_COURSE,
+        course: course,
+        year: year
+    });
+}
+export function discardCourse(course) {
+    AppDispatcher.dispatch({
+        type: CourseActionTypes.DISCARD_COURSE,
+        course: course
+    });
+}
