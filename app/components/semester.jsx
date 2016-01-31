@@ -14,8 +14,7 @@ export default class Semester extends React.Component {
                     <div className="badge pull-right">{ totalEc }</div>
                 </div>
                 { this.props.courses.map(function (course) {
-                    return <Course {...course} key={course.code} removalMode={true}
-                                               removeCourse={this.props.removeCourse}/>
+                    return <Course {...course} key={course.code} removalMode={true} />
                 }.bind(this))
                 }
             </div>

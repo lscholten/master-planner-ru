@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 
 import Dragula from 'dragula';
 
+import * as CourseActions from '../actions/course-actions';
+
 export default class Course extends React.Component {
     setupDragging() {
         var container = ReactDOM.findDOMNode(this);
@@ -21,9 +23,9 @@ export default class Course extends React.Component {
 
         drag.on('drop', function (drake, target) {
             if (target == dropYear1) {
-                this.props.addCourse(1, this.props.courseCode);
+                CourseActions.chooseCourse(1, this.props.courseCode);
             } else if (target == dropYear2) {
-                this.props.addCourse(2, this.props.courseCode);
+                CourseActions.chooseCourse(2, this.props.courseCode);
             }
             drake.remove();
         }.bind(this));
@@ -36,7 +38,7 @@ export default class Course extends React.Component {
     }
 
     removeCourse(event) {
-        this.props.removeCourse(this.props.code);
+        CourseActions.discardCourse(this.props.code);
     }
 
     render () {

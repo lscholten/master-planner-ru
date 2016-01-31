@@ -10,21 +10,16 @@ export default class ProgramSelection extends React.Component {
         this.state = { selectedPrograms: ProgramStore.selected };
     }
 
-    compomentDidMount () {
-        ProgramStore.subscribe(this.updateSelection.bind(this));
+    componentWillMount () {
+        ProgramStore.subscribe(this.updateSelection, this);
     }
 
     componentWillUnmount() {
-        ProgramStore.unsubscribe(this.updateSelection.bind(this));
+        ProgramStore.unsubscribe(this.updateSelection, this);
     }
 
     updateSelection () {
         this.setState({ selectedPrograms: ProgramStore.selected });
-    }
-
-    onSubmit (e) {
-        e.preventDefault();
-        this.props.selectPrograms(this.state.selectedPrograms);
     }
 
     onChange (e) {

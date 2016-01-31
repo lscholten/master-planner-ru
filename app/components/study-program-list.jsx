@@ -4,8 +4,7 @@ import StudyProgram from './study-program';
 const StudyProgramList = (props) => (
         <div>
             {props.programs.map(function (studyProgram) {
-                return <StudyProgram program={studyProgram} key={studyProgram.name} repos={props.repos}
-                                     addCourse={ props.addCourse } picked={props.picked}/>
+                return <StudyProgram program={studyProgram} key={studyProgram.name} />
             }.bind(this))
             }
         </div>

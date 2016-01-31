@@ -11,12 +11,12 @@ export default class Store extends EventEmitter {
         super();
     }
 
-    subscribe (callback) {
-        this.on(CHANGE_EVENT, callback);
+    subscribe (callback, context) {
+        this.on(CHANGE_EVENT, callback, context);
     }
 
-    unsubscribe (callback) {
-        this.removeListener(CHANGE_EVENT, callback)
+    unsubscribe (callback, context) {
+        this.removeListener(CHANGE_EVENT, callback, context);
     }
 
     emitChange() {

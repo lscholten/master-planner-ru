@@ -1,8 +1,10 @@
 import React from 'react';
 
+import CourseStore from '../stores/course-store';
+
 export default class Requirement extends React.Component {
     calcFulfilledEcs() {
-        let filteredPicked = this.props.picked.filter(function (course) {
+        let filteredPicked = this.props.chosenCourses.filter(function (course) {
             for (var i = 0; i < this.props.courseGroups.length; i++) {
                 let courses = this.props.program.courseGroups[this.props.courseGroups[i]].courses;
                 for (var j = 0; j < courses.length; j++) {

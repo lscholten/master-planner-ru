@@ -20,6 +20,25 @@ class CourseStoreClass extends Store {
         this.courses = {};
         this.chosen = {"y1": [], "y2": []};
     }
+
+    getChosenForSemester(year, semester) {
+        return this.chosen[year].filter(function (el) {
+            return el.semester == semester;
+        }.bind(semester));
+    }
+
+    getTotalEcs() {
+        const chosen = this.getAllChosen();
+        return chosen.reduce((total, el) => { return total + el.ec }, 0);
+    }
+
+    getAllChosen() {
+        return this.chosen.y1.concat(this.chosen.y2);
+    }
+
+    findCourseByCode(code) {
+        return this.courses[code];
+    }
 }
 
 const CourseStore = new CourseStoreClass();
