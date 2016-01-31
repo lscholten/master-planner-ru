@@ -62,40 +62,34 @@
     "requirements": [
       {
         "description": "Specialisation Basis",
-        "courseGroups": [
-          "1"
-        ],
+        "courseGroups": ["1"],
         "ec": 18
       },
       {
         "description": "Specialisation Electives",
-        "courseGroups": [
-          "2",
-          "3",
-          "4"
-        ],
+        "courseGroups": ["2", "3", "4"],
         "ec": 24
       },
       {
         "description": "Master's Thesis",
-        "courseGroups": [
-          "7"
-        ],
+        "courseGroups": ["7"],
         "ec": 30
       },
       {
         "description": "Research Internship",
-        "courseGroups": [
-          "6"
-        ],
+        "courseGroups": ["6"],
         "ec": 15
       },
       {
         "description": "Academic Fundamentals",
-        "courseGroups": [
-          "5"
-        ],
+        "courseGroups": ["5"],
         "ec": 9
+      },
+      {
+        "description": "External Choice",
+        "courseGroups": [],
+        "forbiddenCourseGroups": ["2","3","4"],
+        "ec": 12
       },
       {
         "description": "Free Choice",

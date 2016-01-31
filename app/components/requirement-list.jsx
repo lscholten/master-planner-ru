@@ -26,13 +26,28 @@ export default class RequirementList extends React.Component {
         let assignedCourses = {};
 
         this.props.program.requirements.forEach(requirement => {
-           assignedCourses[requirement.description] = 0;
+            assignedCourses[requirement.description] = 0;
         });
 
-        let complexityRequirements = this.props.program.requirements.slice().sort((a, b) => b.courseGroups.length - a.courseGroups.length);
+        let complexityRequirements = this.props.program.requirements.slice();
 
         for (let course of this.state.chosenCourses) {
             for (let req of complexityRequirements) {
+                if (req.forbiddenCourseGroups != undefined) {
+                    let forbidden = false;
+                    for (let courseGroup of req.forbiddenCourseGroups) {
+                        let courses = this.props.program.courseGroups[courseGroup].courses;
+                        for (let grpCourse of courses) {
+                            if (grpCourse == course.code) {
+                                forbidden = true;
+                            }
+                        }
+                    }
+                    if (forbidden) {
+                        continue;
+                    }
+                }
+
                 if (req.courseGroups.length == 0) {
                     assignedCourses[req.description] += course.ec;
                     break;
@@ -70,7 +85,8 @@ export default class RequirementList extends React.Component {
                 <b>Requirements</b> ({ CourseStore.getTotalEcs() } / { this.props.program.ec } ec)<br />
                 {
                     this.props.program.requirements.map(function (requirement, i) {
-                        return <Requirement {...requirement} program={ this.props.program } key={i} fulfilled={ requirementEcs[requirement.description] } />
+                        return <Requirement {...requirement} program={ this.props.program } key={i}
+                                                             fulfilled={ requirementEcs[requirement.description] }/>
                     }.bind(this))
                 }
             </div>

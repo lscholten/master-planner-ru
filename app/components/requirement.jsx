@@ -21,6 +21,19 @@ export default class Requirement extends React.Component {
                         </span>
                         : ""
                 }
+                {
+                    (this.props.forbiddenCourseGroups != undefined && this.props.forbiddenCourseGroups.length > 0) ?
+                        <span>
+                            Can't pick from: [
+                                {
+                                    this.props.forbiddenCourseGroups.map(function (cg) {
+                                        return this.props.program.courseGroups[cg].name + ", ";
+                                    }.bind(this))
+                                }
+                            ]
+                        </span>
+                        : ""
+                }
             </div>
         </div>
     }
