@@ -2,6 +2,7 @@ import React from 'react';
 
 import SemesterList from './semester-list';
 import StudyProgramList from './study-program-list';
+import CourseFinder from './course-finder';
 
 import ProgramStore from '../stores/program-store';
 
@@ -13,6 +14,7 @@ const Planner = (props) => (
         </button>
         <SemesterList />
         <StudyProgramList programs={ ProgramStore.selected } />
+        <CourseFinder />
     </div>
 );
 
