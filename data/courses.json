@@ -181,10 +181,16 @@
     "code": "NWI-IMK009"
   },
   "NWI-I00153": {
-    "name": "Security In Organisations",
+    "name": "Security in Organisations (6EC)",
     "ec": 6,
     "semester": 1,
     "code": "NWI-I00153"
+  },
+  "NWI-IMC053": {
+    "name": "Security in Organisations",
+    "semester": 1,
+    "ec": 5,
+    "code": "NWI-IMC053"
   },
   "NWI-IMK007": {
     "name": "Master's Thesis Information Science",
@@ -225,10 +231,16 @@
     "code": "NWI-I00155"
   },
   "NWI-IMC051": {
-    "name": "Software Security (+1ec)",
-    "ec": 6,
+    "name": "Software Security (zie ook imc054)",
+    "ec": 5,
     "semester": 1,
     "code": "NWI-IMC051"
+  },
+  "NWI-IMC054": {
+    "name": "OpvulEC voor TRU/e cursussen",
+    "ec": 1,
+    "semester": 1,
+    "code": "NWI-IMC054"
   },
   "NWI-IMC035": {
     "name": "Software Analysis",
@@ -290,5 +302,77 @@
     "ec": 15,
     "semester": 1,
     "code": "NWI-IMC047"
+  },
+  "NWI-TRUE01": {
+    "name": "Principles of Data Protection Q1 (TU/e)",
+    "ec": 5,
+    "semester": 1,
+    "code": "NWI-TRUE01"
+  },
+  "NWI-TRUE02": {
+    "name": "Cryptology Q1 (TU/e)",
+    "ec": 5,
+    "semester": 1,
+    "code": "NWI-TRUE02"
+  },
+  "NWI-TRUE03": {
+    "name": "Physical Aspects of Digital Security Q1 (TU/e)",
+    "ec": 5,
+    "semester": 1,
+    "code": "NWI-TRUE03"
+  },
+  "NWI-TRUE04": {
+    "name": "Applied Cryptography Q2 (TU/e)",
+    "ec": 5,
+    "semester": 1,
+    "code": "NWI-TRUE04"
+  },
+  "NWI-TRUE05": {
+    "name": "Hacker's Hut (geen 10 => je bent een loser) Q2 (TU/e)",
+    "ec": 5,
+    "semester": 1,
+    "code": "NWI-TRUE05"
+  },
+  "NWI-TRUE06": {
+    "name": "Cryptographic Protocols Q3 (TU/e)",
+    "ec": 5,
+    "semester": 2,
+    "code": "NWI-TRUE06"
+  },
+  "NWI-TRUE07": {
+    "name": "Verification of Security Protocols Q3 (TU/e)",
+    "ec": 5,
+    "semester": 2,
+    "code": "NWI-TRUE07"
+  },
+  "NWI-TRUE08": {
+    "name": "Seminar IST Q4 (TU/e)",
+    "ec": 5,
+    "semester": 2,
+    "code": "NWI-TRUE08"
+  },
+  "NWI-IMC050": {
+    "name": "Advanced Network Security",
+    "ec": 5,
+    "semester": 2,
+    "code": "NWI-IMC050"
+  },
+  "NWI-IMC001": {
+    "name": "Hardware Security",
+    "ec": 6,
+    "semester": 2,
+    "code": "NWI-IMC001"
+  },
+  "NWI-I00136": {
+    "name": "Privacy Seminar",
+    "ec": 6,
+    "semester": 2,
+    "code": "NWI-I00136"
+  },
+  "NWI-IMC039": {
+    "name": "Cryptographic Engineering",
+    "ec": 6,
+    "semester": 2,
+    "code": "NWI-IMC039"
   }
 }

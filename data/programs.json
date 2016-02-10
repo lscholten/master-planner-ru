@@ -327,5 +327,82 @@
         "ec": 24
       }
     ]
+  },
+  {
+    "name": "Cyber Security (TRU/e)",
+    "ec": 120,
+    "courseGroups": {
+      "1": {
+        "name": "Specialisation Basis",
+        "courses": ["NWI-IMC051", "NWI-IMC053", "NWI-IMC050", "NWI-TRUE01", "NWI-TRUE02", "NWI-TRUE07"]
+      },
+      "2": {
+        "name": "Specialisation Choice",
+        "courses": ["NWI-IMC001", "NWI-IMC006", "NWI-IMC039", "NWI-TRUE03", "NWI-TRUE04", "NWI-TRUE05", "NWI-TRUE06"]
+      },
+      "3": {
+        "name": "Seminar RU",
+        "courses": ["NWI-I00136"]
+      },
+      "4": {
+        "name": "Seminar TU/e",
+        "courses": ["NWI-TRUE08"]
+      },
+      "5": {
+        "name": "Internship",
+        "courses": ["NWI-IMC047"]
+      },
+      "6": {
+        "name": "Philosophy & Ethics",
+        "courses": ["NWI-IMI003"]
+      },
+      "7": {
+        "name": "Master Thesis",
+        "courses": ["NWI-IMC029"]
+      }
+    },
+    "requirements": [
+      {
+        "description": "Specialisation basis",
+        "courseGroups": ["1"],
+        "ec": 30
+      },
+      {
+        "description": "Specialisation choice",
+        "courseGroups": ["2"],
+        "ec": 15
+      },
+      {
+        "description": "Seminar",
+        "courseGroups": ["3", "4"],
+        "ec": 5
+      },
+      {
+        "description": "Internship",
+        "courseGroups": ["5"],
+        "ec": 15
+      },
+      {
+        "description": "Philosophy & Ethics",
+        "courseGroups": ["6"],
+        "ec": 3
+      },
+      {
+        "description": "Master Thesis",
+        "courseGroups": ["7"],
+        "ec": 30
+      },
+      {
+        "description": "External Choice",
+        "courseGroups": [],
+        "forbiddenCourseGroups": ["2","3","4"],
+        "ec": 6
+      },
+      {
+        "description": "Free Choice",
+        "courseGroups": [],
+        "ec": 12
+      }
+    ]
   }
 ]
