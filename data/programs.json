@@ -276,6 +276,11 @@
         "courseGroups": ["4"],
         "ec": 6,
         "noneAbsorbing": true
+      },
+      {
+        "description": "Free choice",
+        "courseGroups": [],
+        "ec": 12
       }
     ]
   },
