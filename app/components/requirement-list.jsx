@@ -32,7 +32,12 @@ export default class RequirementList extends React.Component {
         let complexityRequirements = this.props.program.requirements.slice();
 
         for (let course of this.state.chosenCourses) {
+            let courseAssigned = false;
             for (let req of complexityRequirements) {
+                if (courseAssigned && !req.noneAbsorbing) {
+                    continue;
+                }
+
                 if (req.forbiddenCourseGroups != undefined) {
                     let forbidden = false;
                     for (let courseGroup of req.forbiddenCourseGroups) {
@@ -53,24 +58,18 @@ export default class RequirementList extends React.Component {
                     break;
                 }
 
-                if (assignedCourses[req.description] + course.ec > req.ec) {
+                if (assignedCourses[req.description] >= req.ec) {
                     continue;
                 }
-
-                let assigned = false;
 
                 for (let courseGroup of req.courseGroups) {
                     let courses = this.props.program.courseGroups[courseGroup].courses;
                     for (let grpCourse of courses) {
                         if (grpCourse == course.code) {
                             assignedCourses[req.description] += course.ec;
-                            assigned = true;
+                            courseAssigned = true;
                         }
                     }
-                }
-
-                if (assigned) {
-                    break;
                 }
             }
         }

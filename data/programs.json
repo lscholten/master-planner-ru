@@ -135,6 +135,84 @@
     ]
   },
   {
+    "name": "Software Science",
+    "ec": 120,
+    "courseGroups": {
+      "1": {
+        "name": "Specialisation basis",
+        "courses": ["NWI-I00032", "NWI-IMC046", "NWI-I00110"]
+      },
+      "2": {
+        "name": "Software Technology & Engineering",
+        "courses": ["NWI-IMC004", "NWI-I00155", "NWI-IMC052", "NWI-IMC051"]
+      },
+      "3": {
+        "name": "Computer-aided analysis",
+        "courses": ["NWI-IMC035", "NWI-IMC009", "NWI-I00139"]
+      },
+      "4": {
+        "name": "Theory of Computation",
+        "courses": ["NWI-IMC010", "NWI-IMC011", "NWI-IMC036", "NWI-WM072B", "NWI-WM120B"]
+      },
+      "5": {
+        "name": "Academic Fundamentals",
+        "courses": ["NWI-IMC045", "NWI-IMI003"]
+      },
+      "6": {
+        "name": "Internship",
+        "courses": ["NWI-IMC047"]
+      },
+      "7": {
+        "name": "Master Thesis",
+        "courses": ["NWI-IMC029"]
+      }
+    },
+    "requirements": [
+      {
+        "description": "Specialisation basis",
+        "courseGroups": ["1"],
+        "ec": 18
+      },
+      {
+        "description": "Specialisation Electives",
+        "courseGroups": ["2", "3", "4"],
+        "ec": 24
+      },
+      {
+        "description": "Internship",
+        "courseGroups": ["6"],
+        "ec": 15
+      },
+      {
+        "description": "Master's Thesis",
+        "courseGroups": ["7"],
+        "ec": 30
+      },
+      {
+        "description": "Academic Fundamentals",
+        "courseGroups": ["5"],
+        "ec": 9
+      },
+      {
+        "description": "At least one computation",
+        "courseGroups": ["4"],
+        "ec": 6,
+        "noneAbsorbing": true
+      },
+      {
+        "description": "External Choice",
+        "courseGroups": [],
+        "forbiddenCourseGroups": ["2","3","4"],
+        "ec": 12
+      },
+      {
+        "description": "Free Choice",
+        "courseGroups": [],
+        "ec": 12
+      }
+    ]
+  },
+  {
     "name": "Software Science (SMI Variant)",
     "ec": 120,
     "courseGroups": {
@@ -196,7 +274,8 @@
       {
         "description": "At least one computation",
         "courseGroups": ["4"],
-        "ec": 6
+        "ec": 6,
+        "noneAbsorbing": true
       }
     ]
   },

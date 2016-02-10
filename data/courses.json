@@ -243,10 +243,10 @@
     "code": "NWI-IMC009"
   },
   "NWI-I00139": {
-    "name": "Proof Assistans",
+    "name": "Proof Assistants",
     "ec": 6,
     "semester": 2,
-    "code": "NWI-I0039"
+    "code": "NWI-I00139"
   },
   "NWI-IMC010": {
     "name": "Type Theory & Coq",
