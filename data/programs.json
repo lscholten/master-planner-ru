@@ -404,5 +404,70 @@
         "ec": 12
       }
     ]
+  },
+  {
+    "name": "Mathematical Foundations of Computer Science",
+    "ec": 120,
+    "courseGroups": {
+      "1": {
+        "name": "Specialisation Basis",
+        "courses": ["NWI-IMC010", "NWI-WM069B", "NWI-IMC049"]
+      },
+      "2": {
+        "name": "Category RU-CS",
+        "courses": ["NWI-I00032", "NWI-IMC009", "NWI-IMC004", "NWI-IMC046", "NWI-I00139", "NWI-IMC011", "NWI-NB054E"]
+      },
+      "3": {
+        "name": "Category RU-Math",
+        "courses": ["NWI-WM072B", "NWI-WM120B", "NWI-WB070B", "NWI-WM040B", "NWI-IMC036", "NWI-WM033C"]
+      },
+      "4": {
+        "name": "Philosophy",
+        "courses": ["NWI-IMI003"]
+      },
+      "5": {
+        "name": "Master's Thesis",
+        "courses": ["NWI-IMC048"]
+      }
+    },
+    "requirements": [
+      {
+        "description": "Specialisation Basis",
+        "ec": 15,
+        "courseGroups": ["1"]
+      },
+      {
+        "description": "Specialisation Electives",
+        "ec": 56,
+        "courseGroups": ["2", "3"]
+      },
+      {
+        "description": "At least 1 course from RU-CS",
+        "ec": 6,
+        "noneAbsorbing": true,
+        "courseGroups": ["2"]
+      },
+      {
+        "description": "At least 1 course from RU-Math",
+        "ec": 6,
+        "noneAbsorbing": true,
+        "courseGroups": ["3"]
+      },
+      {
+        "description": "Philosophy",
+        "ec": 3,
+        "courseGroups": ["4"]
+      },
+      {
+        "description": "Master's Thesis",
+        "ec": 40,
+        "courseGroups": ["5"]
+      },
+      {
+        "description": "Free electives",
+        "ec": 6,
+        "courseGroups": []
+      }
+    ]
   }
 ]

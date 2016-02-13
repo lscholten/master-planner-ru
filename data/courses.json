@@ -273,7 +273,7 @@
     "code": "NWI-IMC011"
   },
   "NWI-IMC036": {
-    "name": "Coalgebra (NOT IN 2015)",
+    "name": "Coalgebra (NOT IN 2015/2016)",
     "ec": 6,
     "semester": 1,
     "code": "NWI-IMC036"
@@ -285,7 +285,7 @@
     "code": "NWI-WM072B"
   },
   "NWI-WM120B": {
-    "name": "Computability Theory (2016)",
+    "name": "Computability Theory (not in 2015/2016)",
     "ec": 8,
     "semester": 1,
     "code": "NWI-WM120B"
@@ -374,5 +374,43 @@
     "ec": 6,
     "semester": 2,
     "code": "NWI-IMC039"
+  },
+  "NWI-WM069B": {
+    "name": "Computer Algebra",
+    "ec": 6,
+    "semester": 2,
+    "code": "NWI-WM069B"
+  },
+  "NWI-IMC049": {
+    "name": "MFoCS Seminar (Q3)",
+    "ec": 3,
+    "semester": 2,
+    "code": "NWI-IMC049"
+  },
+  "NWI-IMC048": {
+    "name": "Master Thesis MFoCS",
+    "ec": 40,
+    "semester": 2,
+    "code": "NWI-IMC048"
+  },
+  "NWI-WB070B": {
+    "name": "Intuitionisit Mathematics",
+    "shortName": "Int. Math. (NOT GIVEN, SEE STUDY GUIDE)",
+    "ec": 6,
+    "semester": 1,
+    "code": "NWI-WB070B"
+  },
+  "NWI-WM040B": {
+    "name": "Philosophy of Mathematics",
+    "shortName": "Phil. Math. (NOT IN 2015/2016, SEE STUDY GUIDE)",
+    "ec": 6,
+    "semester": 1,
+    "code": "NWI-WM040B"
+  },
+  "NWI-WM033C": {
+    "name": "Category Theory (NOT IN 2015/2016, SEE STUDY GUIDE)",
+    "ec": 6,
+    "semester": 2,
+    "code": "NWI-WM033C"
   }
 }
